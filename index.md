@@ -43,6 +43,8 @@ graph TB
     end
 ```</pre>
 
+> **Note:** To view the Mermaid diagram above, copy the code and paste it into [Mermaid Live](https://mermaid.live/) for proper rendering.
+
 The library boasts remarkable flexibility, being:
 *   **Model-agnostic**: Connects to virtually any LLM, from local Transformers models and Ollama to cloud-based APIs like OpenAI, Anthropic, and Hugging Face Inference Providers (Cerebras, Cohere, Fal, Fireworks, Nebius, SambaNova, Together, etc.), including Azure OpenAI and Amazon Bedrock.
 *   **Tool-agnostic**: Seamlessly integrates tools from various sources, including built-in functionalities (web search, Python interpreter), custom-defined Python functions, Hugging Face Spaces, LangChain, and Model Context Protocol (MCP) servers.
