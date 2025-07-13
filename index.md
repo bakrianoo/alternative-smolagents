@@ -3,13 +3,17 @@ layout: default
 title: Home
 ---
 
-# Building Agentic Systems with Smolagents: A Comprehensive Tutorial
+# Building Agentic Systems with Smolagents
+
+> **Note:** While `smolagents` has [official documentation](https://huggingface.co/docs/smolagents/index), this tutorial provides a more organized approach with practical business examples and real-world applications.
 
 ## Summary: Unlocking Agentic AI with Smolagents
 
 [`smolagents`](https://github.com/huggingface/smolagents) is a powerful yet concise Python library designed to simplify the development and deployment of AI agents. It stands out by offering first-class support for "Code Agents," where Large Language Models (LLMs) write and execute Python code to perform tasks, enabling complex logic, dynamic tool composition, and emergent reasoning. Beyond this innovative approach, `smolagents` also supports traditional "Tool Calling Agents" that interact via structured JSON outputs.
 
-```mermaid
+
+
+<pre>```mermaid
 graph TB
     subgraph "Smolagents Ecosystem"
         A[LLM Models] --> B[Agent Types]
@@ -37,7 +41,7 @@ graph TB
         I --> J[Production Ready]
         J --> K[Observable & Monitored]
     end
-```
+```</pre>
 
 The library boasts remarkable flexibility, being:
 *   **Model-agnostic**: Connects to virtually any LLM, from local Transformers models and Ollama to cloud-based APIs like OpenAI, Anthropic, and Hugging Face Inference Providers (Cerebras, Cohere, Fal, Fireworks, Nebius, SambaNova, Together, etc.), including Azure OpenAI and Amazon Bedrock.
@@ -48,6 +52,73 @@ The library boasts remarkable flexibility, being:
 *   **Observable**: Supports OpenTelemetry for detailed monitoring and inspection of agent runs, crucial for debugging and optimization in production.
 
 This tutorial aims to guide you from foundational concepts to building sophisticated, production-ready agentic solutions using `smolagents`, connecting technical features to tangible business outcomes.
+
+---
+
+##  Installation and Environment Setup
+
+Before you start building with `smolagents`, let's set up your development environment.
+
+### Prerequisites
+*   **Python:** Version 3.10 or newer.
+*   **pip:** Python's package installer, usually comes with Python.
+
+### Environment Variables for API Access
+
+Many LLMs and tools rely on API keys for authentication. While not strictly required for local models, it's good practice to set up your environment variables, especially if you plan to use hosted LLMs.
+
+For example, if you plan to use Hugging Face Inference API models or other external LLM providers, you'll need to set your API tokens.
+
+You can create a `.env` file in your project directory with the following content:
+
+```bash
+# For Hugging Face Inference API (recommended for many hosted models)
+HF_TOKEN="YOUR_HUGGING_FACE_TOKEN"
+
+# For OpenAI API (if you plan to use GPT models)
+OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
+
+# For SerpAPI (if you plan to use advanced web search tools)
+SERPAPI_API_KEY="SEARCH-SERPAPI-KEY"
+
+# For Anthropic API (if you plan to use Claude models)
+ANTHROPIC_API_KEY="sk-ant-YOUR_ANTHROPIC_API_KEY"
+```
+
+In the beginning of your Python scripts, you can load these environment variables using the `python-dotenv` package:
+
+```python
+from dotenv import load_dotenv
+load_dotenv()
+```
+
+You can get your Hugging Face token from your [Hugging Face settings page](https://huggingface.co/settings/tokens). For other providers, refer to their respective documentation.
+
+### Basic Installation
+
+To get the core `smolagents` library, open your terminal or command prompt and run:
+
+```bash
+pip install smolagents  -qU
+```
+
+### Recommended Python Packages
+
+```bash
+pip install python-dotenv wikipedia-api ddgs -qU
+pip install langchain-community google-search-results -qU
+```
+
+### Installation with Extras (Recommended for Most Use Cases)
+
+`smolagents` offers optional dependencies, called "extras", to enable specific functionalities like web search, local LLM inference, or advanced UI. For most practical applications, especially those involving web interactions, we recommend installing with the `[toolkit]` extra:
+
+```bash
+pip install "smolagents[toolkit]" -qU
+```
+
+This will install `smolagents` along with default tools like `DuckDuckGoSearchTool` and `VisitWebpageTool`, which are essential for many agentic workflows.
+
 
 ---
 
