@@ -1,3 +1,8 @@
+---
+layout: default
+title: Home
+---
+
 # Building Agentic Systems with Smolagents: A Comprehensive Tutorial
 
 ## Summary: Unlocking Agentic AI with Smolagents
@@ -52,7 +57,7 @@ Each section will cover core concepts and demonstrate them through practical, re
 
 ### 1. Getting Started with Smolagents
 
-**[Visit Docs](./01.md)**
+**[Read](./pages/01.md)**
 
 **Concepts Covered:**
 *   What is an AI Agent and why use one?
@@ -69,6 +74,8 @@ Each section will cover core concepts and demonstrate them through practical, re
 
 ### 2. Understanding Agent Fundamentals: CodeAgent vs. ToolCallingAgent
 
+**[Read](./pages/02.md)**
+
 **Concepts Covered:**
 *   The ReAct framework for multi-step reasoning.
 *   Detailed mechanics of `CodeAgent` and `ToolCallingAgent`.
@@ -83,6 +90,8 @@ Each section will cover core concepts and demonstrate them through practical, re
 *   Under the Hood: Agent Memory and Execution Flow
 
 ### 3. Empowering Agents with Tools
+
+**[Read](./pages/03.md)**
 
 **Concepts Covered:**
 *   Defining a tool's API and purpose.
@@ -100,6 +109,8 @@ Each section will cover core concepts and demonstrate them through practical, re
 
 ### 4. Building Advanced Agent Architectures
 
+**[Read](./pages/04.md)**
+
 **Concepts Covered:**
 *   Designing and implementing multi-agent collaboration.
 *   Advanced memory management strategies.
@@ -114,6 +125,8 @@ Each section will cover core concepts and demonstrate them through practical, re
 
 ### 5. Ensuring Production Readiness: Security & Monitoring
 
+**[Read](./pages/061.md)**
+
 **Concepts Covered:**
 *   Mitigating security risks with sandboxed code execution.
 *   Implementing best practices for secure agent deployments.
@@ -127,6 +140,8 @@ Each section will cover core concepts and demonstrate them through practical, re
 *   Interactive Agent UIs: Building and Deploying with Gradio
 
 ### 6. Real-world Applications and Case Studies
+
+**[Read](./pages/06.md)**
 
 **Concepts Covered:**
 *   Applying `smolagents` to solve complex business problems.
